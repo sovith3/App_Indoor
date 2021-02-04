@@ -10,7 +10,7 @@ export class HomePage implements OnInit{
 
   data:any= {temperatura:"--", humedad:'--'};
   estadoRiegoAutomatico:boolean=true;
-  luz:boolean=true;
+  luz:boolean=false;
   btnregar:boolean=true;
 
   constructor(private socket:Socket) {}
@@ -40,11 +40,11 @@ export class HomePage implements OnInit{
   }
     encenderLuz(){
     if(this.luz){
-      this.luz = !this.luz;
-      this.socket.emit('luz', {estado:'on'});
-    }else{
-      this.luz = !this.luz;
+      this.luz = false;
       this.socket.emit('luz', {estado:'off'});
+    }else{
+      this.luz = true;
+      this.socket.emit('luz', {estado:'on'});
     }
   }
   regar(){
