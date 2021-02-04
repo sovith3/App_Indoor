@@ -1,20 +1,35 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <div class="cover">
+  <ion-row>
+    <ion-col size="12" class="ion-text-center" style="background: #51906d;">
+        <ion-label class="text title" expand="full">Indoor</ion-label>
+    </ion-col>
+    <ion-col size="12" class="ion-text-center temp-container">
+      <div class="temp">
+        <ion-label class="text2">Temperatura: {{data.temperatura}}</ion-label>
+      </div>
+  </ion-col>
+  <ion-col size="12" class="ion-text-center" style="margin-bottom: 15vh;">
+    <div class="hum">
+      <ion-label class="text2">Humedad: {{data.humedad}}</ion-label>
+    </div>
+</ion-col>
+  <ion-col size="12">
+    <div>
+      <ion-item class="but">
+        <ion-label>Riego Automático</ion-label>
+        <ion-toggle slot="end" name="apple" color="secondary" checked={{estadoRiegoAutomatico}} (ionChange)="riegoautomatico()"></ion-toggle>
+      </ion-item>
+      <ion-item class="but">
+        <ion-label>Luz</ion-label>
+        <ion-toggle slot="end" name="apple" color="secondary" checked={{luz}} (ionChange)="encenderLuz()"></ion-toggle>
+      </ion-item>
+      <ion-item class="but">
+        <ion-label>Riego Manual</ion-label>
+        <ion-button disabled={{btnregar}} (click)="regar()" ><ion-icon name="water"></ion-icon></ion-button>
+      </ion-item>
+    </div>
+  </ion-col>
+</ion-row>
+</div>
 </ion-content>

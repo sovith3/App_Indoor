@@ -25,3 +25,63 @@
 #container a {
   text-decoration: none;
 }
+
+.cover{
+  background: url(../../assets/png/cover.png) 0 0/100% 100% no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.text{
+    font-family: Aclonica, sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 1.1em;
+    letter-spacing: 5.7px;
+    text-align: center;
+}
+.list-home{
+  background: var(--ion-item-background, var(--ion-background-color, none)) !important;
+}
+.temp-container{
+  margin-top:10vh;
+}
+.temp{
+  background:#ef0d0d;
+  margin: auto;
+  width: 81vw;
+  border-radius: 15px;
+  height: 13vh;
+  padding-top: 5vh;
+}
+.hum{
+  background: #0a1be2;
+  margin: auto;
+  width: 81vw;
+  border-radius: 15px;
+  height: 13vh;
+  padding-top: 5vh;
+}
+.text2{
+  font-family: Aclonica, sans-serif;
+    font-size: 18px;
+    /* font-weight: bold; */
+    color: white;
+    text-transform: uppercase;
+    font-style: normal;
+    /* text-decoration: none; */
+    line-height: 1.1em;
+    letter-spacing: 1.7px;
+    text-align: center;
+    font-weight: bold;
+}
+.but{
+  width: 62vw;
+  margin: auto;
+  margin-top: 14px;
+  border-radius: 10px;
+}
+
